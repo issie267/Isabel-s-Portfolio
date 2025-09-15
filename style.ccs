@@ -1,197 +1,112 @@
-/* =========================
-   Shared styles (style.css)
-   ========================= */
-
-/* -- Brand colours (Loughborough-inspired) -- */
-:root{
-  --purple: #5B2E91;        /* primary Loughborough-like purple */
-  --purple-dark: #3f1d63;
-  --pink: #ff4da6;          /* highlight pink */
-  --pink-soft: #ff7cbf;
-  --muted: #6b6b6b;
-  --bg: #f6f5fb;
-  --card-bg: #ffffff;
-  --accent: linear-gradient(135deg, var(--purple), var(--pink));
-  --glass: rgba(255,255,255,0.72);
-  --max-width: 1100px;
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Basic page layout */
-* { box-sizing: border-box; }
-html,body { height: 100%; }
-body{
-  margin:0;
-  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background: var(--bg);
-  color: #111;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  line-height: 1.45;
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: #f8f6fb;
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Skip link for accessibility */
-.skip-link{
-  position: absolute;
-  left:-999px;
-  top:auto;
-  width:1px;
-  height:1px;
-  overflow:hidden;
-}
-.skip-link:focus{
-  left:12px;
-  top:12px;
-  padding:8px 12px;
-  background:#000;
-  color:#fff;
-  z-index:9999;
-  width:auto;
-  height:auto;
-  border-radius:4px;
-}
-
-/* Header / top bar */
-.site-header{
-  background: linear-gradient(90deg, var(--purple), var(--purple-dark));
-  color: #fff;
-  padding: 1.2rem 1rem;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:1rem;
-}
-.site-brand{
-  display:flex;
-  gap:0.75rem;
-  align-items:center;
-}
-.site-brand .logo {
-  width:52px;
-  height:52px;
-  border-radius:8px;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:700;
-  letter-spacing:0.6px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.06));
-  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-}
-.site-brand h1{
-  font-size:1.05rem;
-  margin:0;
-  font-weight:700;
-}
-.site-brand p {
-  margin:0;
-  font-size:0.85rem;
-  opacity:0.95;
-}
-
-/* Nav */
-.site-nav{
-  display:flex;
-  gap:10px;
-  align-items:center;
-}
-.site-nav a{
-  color: #fff;
-  text-decoration:none;
-  font-weight:600;
-  padding:8px 12px;
-  border-radius:8px;
-  transition: background .18s, transform .15s;
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-}
-.site-nav a .fa-fw { width:16px; text-align:center; }
-.site-nav a:hover,
-.site-nav a:focus{
-  background: rgba(255,255,255,0.08);
-  transform:translateY(-2px);
-  outline: none;
-}
-.site-nav a.active{
-  background: rgba(255,255,255,0.14);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-}
-
-/* Page container */
-.container{
-  max-width: var(--max-width);
-  margin: -32px auto 48px auto; /* pulls main up under header a bit */
-  padding: 1rem;
-}
-
-/* Hero on homepage */
-.hero {
-  background: linear-gradient(180deg, rgba(91,46,145,0.9), rgba(91,46,145,0.85)), url("images/hero-bg.jpg");
-  background-size: cover;
-  background-position: center;
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #512d6d, #b5007a);
   color: white;
-  border-radius: 12px;
-  padding: 48px 28px;
-  box-shadow: 0 12px 30px rgba(59,22,99,0.28);
-  display:flex;
-  gap:24px;
-  align-items:center;
-  justify-content:space-between;
-}
-.hero .intro {
-  max-width:640px;
-}
-.hero h2{
-  margin:0 0 8px 0;
-  font-size:2rem;
-  line-height:1.05;
-}
-.hero p{
-  margin:0 0 18px 0;
-  opacity:0.95;
-}
-.hero .cta-row{
-  display:flex;
-  gap:12px;
-  flex-wrap:wrap;
 }
 
-/* Big tile button styles (primary requirement) */
-.tiles {
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-  gap:18px;
-  margin-top:20px;
+header h1 {
+  font-size: 2.5rem;
 }
+
+header p {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Grid layout for tiles */
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  flex-grow: 1;
+}
+
+/* Tile styles */
 .tile {
-  display:flex;
-  gap:14px;
-  align-items:center;
-  padding:20px;
-  border-radius:12px;
-  color: #111;
-  text-decoration:none;
-  min-height:120px;
-  transition: transform .18s ease, box-shadow .18s ease;
-  box-shadow: 0 8px 22px rgba(16,16,40,0.06);
-  border: 1px solid rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 16px;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  color: white;
 }
-.tile:focus { outline: 3px solid rgba(255,77,166,0.14); outline-offset:4px; }
-.tile .tile-icon {
-  width:72px;
-  height:72px;
-  border-radius:12px;
-  display:grid;
-  place-items:center;
-  font-size:28px;
-  color:#fff;
-  flex-shrink:0;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+
+.tile i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
-.tile .tile-body h3 { margin:0 0 6px 0; font-size:1.05rem; color:#fff; }
-.tile .tile-body p { margin:0; color: rgba(255,255,255,0.92); font-size:0.92rem; opacity:0.96; }
 
-.tile:hover { transform: translateY(-6px); }
+.tile.purple {
+  background: #512d6d;
+}
 
-/* Individual tile colour variants */
-.tile-edu { background: linear-gradient(135deg, va
+.tile.pink {
+  background: #b5007a;
+}
+
+.tile:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Image tiles */
+.image-tile {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+}
+
+.image-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.image-tile .tile-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  background: rgba(81, 45, 109, 0.8);
+  color: white;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #eee;
+  font-size: 0.9rem;
+}
