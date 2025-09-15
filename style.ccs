@@ -1,145 +1,197 @@
-/* ===== General Styles ===== */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  line-height: 1.6;
-  color: #222;
-  background: #f9f9f9;
+/* =========================
+   Shared styles (style.css)
+   ========================= */
+
+/* -- Brand colours (Loughborough-inspired) -- */
+:root{
+  --purple: #5B2E91;        /* primary Loughborough-like purple */
+  --purple-dark: #3f1d63;
+  --pink: #ff4da6;          /* highlight pink */
+  --pink-soft: #ff7cbf;
+  --muted: #6b6b6b;
+  --bg: #f6f5fb;
+  --card-bg: #ffffff;
+  --accent: linear-gradient(135deg, var(--purple), var(--pink));
+  --glass: rgba(255,255,255,0.72);
+  --max-width: 1100px;
 }
 
-header {
-  background: #003366;
-  color: white;
-  padding: 2rem;
-  text-align: center;
+/* Basic page layout */
+* { box-sizing: border-box; }
+html,body { height: 100%; }
+body{
+  margin:0;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: #111;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height: 1.45;
 }
 
-nav {
-  background: #0055a5;
-  padding: 0.5rem;
-  text-align: center;
+/* Skip link for accessibility */
+.skip-link{
+  position: absolute;
+  left:-999px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+.skip-link:focus{
+  left:12px;
+  top:12px;
+  padding:8px 12px;
+  background:#000;
+  color:#fff;
+  z-index:9999;
+  width:auto;
+  height:auto;
+  border-radius:4px;
 }
 
-nav a {
-  color: white;
-  margin: 0 1rem;
-  text-decoration: none;
-  font-weight: bold;
+/* Header / top bar */
+.site-header{
+  background: linear-gradient(90deg, var(--purple), var(--purple-dark));
+  color: #fff;
+  padding: 1.2rem 1rem;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+}
+.site-brand{
+  display:flex;
+  gap:0.75rem;
+  align-items:center;
+}
+.site-brand .logo {
+  width:52px;
+  height:52px;
+  border-radius:8px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  letter-spacing:0.6px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.06));
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+.site-brand h1{
+  font-size:1.05rem;
+  margin:0;
+  font-weight:700;
+}
+.site-brand p {
+  margin:0;
+  font-size:0.85rem;
+  opacity:0.95;
 }
 
-nav a:hover {
-  text-decoration: underline;
+/* Nav */
+.site-nav{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+.site-nav a{
+  color: #fff;
+  text-decoration:none;
+  font-weight:600;
+  padding:8px 12px;
+  border-radius:8px;
+  transition: background .18s, transform .15s;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+.site-nav a .fa-fw { width:16px; text-align:center; }
+.site-nav a:hover,
+.site-nav a:focus{
+  background: rgba(255,255,255,0.08);
+  transform:translateY(-2px);
+  outline: none;
+}
+.site-nav a.active{
+  background: rgba(255,255,255,0.14);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
-main {
-  max-width: 900px;
-  margin: auto;
-  padding: 2rem;
-  background: white;
-  margin-top: 1rem;
-  border-radius: 8px;
-}
-
-h1, h2 {
-  color: #003366;
-}
-
-img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin-top: 1rem;
-}
-
-footer {
-  background: #003366;
-  color: white;
-  text-align: center;
+/* Page container */
+.container{
+  max-width: var(--max-width);
+  margin: -32px auto 48px auto; /* pulls main up under header a bit */
   padding: 1rem;
-  margin-top: 2rem;
 }
-/* ===== Hero Section ===== */
+
+/* Hero on homepage */
 .hero {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-              url("images/hero-bg.jpg") center/cover no-repeat;
+  background: linear-gradient(180deg, rgba(91,46,145,0.9), rgba(91,46,145,0.85)), url("images/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
   color: white;
-  text-align: center;
-  padding: 6rem 2rem;
+  border-radius: 12px;
+  padding: 48px 28px;
+  box-shadow: 0 12px 30px rgba(59,22,99,0.28);
+  display:flex;
+  gap:24px;
+  align-items:center;
+  justify-content:space-between;
+}
+.hero .intro {
+  max-width:640px;
+}
+.hero h2{
+  margin:0 0 8px 0;
+  font-size:2rem;
+  line-height:1.05;
+}
+.hero p{
+  margin:0 0 18px 0;
+  opacity:0.95;
+}
+.hero .cta-row{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+/* Big tile button styles (primary requirement) */
+.tiles {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+  gap:18px;
+  margin-top:20px;
 }
+.tile {
+  display:flex;
+  gap:14px;
+  align-items:center;
+  padding:20px;
+  border-radius:12px;
+  color: #111;
+  text-decoration:none;
+  min-height:120px;
+  transition: transform .18s ease, box-shadow .18s ease;
+  box-shadow: 0 8px 22px rgba(16,16,40,0.06);
+  border: 1px solid rgba(0,0,0,0.03);
+}
+.tile:focus { outline: 3px solid rgba(255,77,166,0.14); outline-offset:4px; }
+.tile .tile-icon {
+  width:72px;
+  height:72px;
+  border-radius:12px;
+  display:grid;
+  place-items:center;
+  font-size:28px;
+  color:#fff;
+  flex-shrink:0;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+.tile .tile-body h3 { margin:0 0 6px 0; font-size:1.05rem; color:#fff; }
+.tile .tile-body p { margin:0; color: rgba(255,255,255,0.92); font-size:0.92rem; opacity:0.96; }
 
-.hero p {
-  font-size: 1.3rem;
-  margin-bottom: 2rem;
-}
+.tile:hover { transform: translateY(-6px); }
 
-.btn {
-  background: #ffcc00;
-  color: #003366;
-  padding: 0.7rem 1.5rem;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.btn:hover {
-  background: #ffaa00;
-}
-
-/* ===== Cards ===== */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.card {
-  background: white;
-  padding: 1.5rem;
-  text-align: center;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card i {
-  color: #0055a5;
-  margin-bottom: 1rem;
-}
-
-.card a {
-  display: inline-block;
-  margin-top: 1rem;
-  font-weight: bold;
-  text-decoration: none;
-  color: #0055a5;
-}
-
-.card a:hover {
-  text-decoration: underline;
-}
-
-/* ===== Links Section ===== */
-.links {
-  text-align: center;
-  margin-top: 3rem;
-}
-
-.links a {
-  color: #0055a5;
-  font-weight: bold;
-  text-decoration: none;
-  margin: 0 0.5rem;
-}
-
-.links a:hover {
-  text-decoration: underline;
-}
+/* Individual tile colour variants */
+.tile-edu { background: linear-gradient(135deg, va
