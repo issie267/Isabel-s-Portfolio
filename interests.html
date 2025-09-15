@@ -1,72 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Interests — Isabel Scobbie</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interests - Isabel Scobbie</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body data-page="interests">
-  <a class="skip-link" href="#main">Skip to main content</a>
-
-  <header class="site-header" role="banner">
-    <div class="site-brand">
-      <div class="logo">IS</div>
-      <div>
-        <h1>Isabel Scobbie</h1>
-        <p>Interests & Achievements</p>
-      </div>
-    </div>
-
-    <nav class="site-nav" role="navigation" aria-label="Main">
-      <a href="index.html" class="nav-link" data-link="home"><i class="fa-solid fa-house fa-fw"></i> Home</a>
-      <a href="education.html" class="nav-link" data-link="education"><i class="fa-solid fa-graduation-cap fa-fw"></i> Education</a>
-      <a href="experience.html" class="nav-link" data-link="experience"><i class="fa-solid fa-briefcase fa-fw"></i> Experience</a>
-      <a href="volunteering.html" class="nav-link" data-link="volunteering"><i class="fa-solid fa-hands-helping fa-fw"></i> Volunteering</a>
-      <a href="interests.html" class="nav-link" data-link="interests"><i class="fa-solid fa-star fa-fw"></i> Interests</a>
-    </nav>
+<body>
+  <header>
+    <h1>Interests & Achievements</h1>
   </header>
 
-  <main id="main" class="container" role="main">
-    <h2>Interests & Achievements</h2>
+  <main class="content">
+    <h2>STEM & Academic Interests</h2>
+    <p>Selected to take part in a Chemical Engineering Course at UCL, where my team won 1st prize for project delivery and presentation.</p>
+    <p>Active member of the Women’s Initiative Network (WIN) at Loughborough University and Caterpillar.</p>
 
-    <div class="quick-tiles">
-      <a href="education.html"><i class="fa-solid fa-graduation-cap fa-fw"></i> Education</a>
-      <a href="experience.html"><i class="fa-solid fa-briefcase fa-fw"></i> Experience</a>
-      <a href="volunteering.html"><i class="fa-solid fa-hands-helping fa-fw"></i> Volunteering</a>
-      <a href="interests.html"><i class="fa-solid fa-star fa-fw"></i> Interests</a>
-    </div>
+    <h2>Sports & Wellbeing</h2>
+    <p>Enjoy cycling, running, and yoga, including several charity fundraising events. Chair of the Yoga Society at Loughborough Students’ Union.</p>
 
-    <article class="card">
-      <h3>Mathematical Problem Solving</h3>
-      <p>I enjoy tackling maths-based engineering problems and modelling real-world systems using Python and MATLAB.</p>
-    </article>
+    <h2>Mental Health Advocacy</h2>
+    <p>Keen advocate for mental health. Completed the UK Mental Health First Aid (MHFA) course.</p>
 
-    <article class="card">
-      <h3>Technology & Visualisation</h3>
-      <p>Power BI dashboards, Power Apps, website projects and prototyping — especially for risk and safety dashboards.</p>
-      <img src="images/dashboard-screenshot.jpg" alt="Screenshot of Power BI dashboard">
-    </article>
-
-    <article class="card">
-      <h3>Community & Sport</h3>
-      <p>Yoga society chair, cycling, running and charity events. Mental health advocacy and MHFA training.</p>
-    </article>
-
+    <a href="index.html" class="tile purple" style="max-width:200px; margin:2rem auto; display:block; text-align:center;">← Back</a>
   </main>
-
-  <footer class="site-footer">
-    <div>© 2025 Isabel Scobbie</div>
-  </footer>
-
-  <script>
-    (function(){
-      const page = document.body.getAttribute('data-page') || 'interests';
-      document.querySelectorAll('.site-nav .nav-link').forEach(a=>{
-        if(a.dataset.link === page) a.classList.add('active');
-      });
-    })();
-  </script>
 </body>
 </html>
