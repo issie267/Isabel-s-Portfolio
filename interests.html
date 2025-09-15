@@ -1,39 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interests – Isabel Scobbie</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Interests — Isabel Scobbie</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-page="interests">
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-<header>
-  <h1>Interests</h1>
-</header>
+  <header class="site-header" role="banner">
+    <div class="site-brand">
+      <div class="logo">IS</div>
+      <div>
+        <h1>Isabel Scobbie</h1>
+        <p>Interests & Achievements</p>
+      </div>
+    </div>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="education.html">Education</a>
-  <a href="experience.html">Experience</a>
-  <a href="volunteering.html">Volunteering</a>
-  <a href="interests.html">Interests</a>
-</nav>
+    <nav class="site-nav" role="navigation" aria-label="Main">
+      <a href="index.html" class="nav-link" data-link="home"><i class="fa-solid fa-house fa-fw"></i> Home</a>
+      <a href="education.html" class="nav-link" data-link="education"><i class="fa-solid fa-graduation-cap fa-fw"></i> Education</a>
+      <a href="experience.html" class="nav-link" data-link="experience"><i class="fa-solid fa-briefcase fa-fw"></i> Experience</a>
+      <a href="volunteering.html" class="nav-link" data-link="volunteering"><i class="fa-solid fa-hands-helping fa-fw"></i> Volunteering</a>
+      <a href="interests.html" class="nav-link" data-link="interests"><i class="fa-solid fa-star fa-fw"></i> Interests</a>
+    </nav>
+  </header>
 
-<main>
-  <section>
-    <h2>Mathematical Problem Solving</h2>
-    <p>I enjoy tackling complex maths-based problems and applying them to real-world engineering challenges.</p>
-    <h2>Technology & Coding</h2>
-    <p>Building websites, coding in Python/MATLAB, and developing Power BI dashboards.</p>
-    <h2>Sports & Community</h2>
-    <p>Passionate about teamwork, mentoring, and contributing to student and professional communities.</p>
-  </section>
-</main>
+  <main id="main" class="container" role="main">
+    <h2>Interests & Achievements</h2>
 
-<footer>
-  <p>© 2025 Isabel Scobbie</p>
-</footer>
+    <div class="quick-tiles">
+      <a href="education.html"><i class="fa-solid fa-graduation-cap fa-fw"></i> Education</a>
+      <a href="experience.html"><i class="fa-solid fa-briefcase fa-fw"></i> Experience</a>
+      <a href="volunteering.html"><i class="fa-solid fa-hands-helping fa-fw"></i> Volunteering</a>
+      <a href="interests.html"><i class="fa-solid fa-star fa-fw"></i> Interests</a>
+    </div>
 
+    <article class="card">
+      <h3>Mathematical Problem Solving</h3>
+      <p>I enjoy tackling maths-based engineering problems and modelling real-world systems using Python and MATLAB.</p>
+    </article>
+
+    <article class="card">
+      <h3>Technology & Visualisation</h3>
+      <p>Power BI dashboards, Power Apps, website projects and prototyping — especially for risk and safety dashboards.</p>
+      <img src="images/dashboard-screenshot.jpg" alt="Screenshot of Power BI dashboard">
+    </article>
+
+    <article class="card">
+      <h3>Community & Sport</h3>
+      <p>Yoga society chair, cycling, running and charity events. Mental health advocacy and MHFA training.</p>
+    </article>
+
+  </main>
+
+  <footer class="site-footer">
+    <div>© 2025 Isabel Scobbie</div>
+  </footer>
+
+  <script>
+    (function(){
+      const page = document.body.getAttribute('data-page') || 'interests';
+      document.querySelectorAll('.site-nav .nav-link').forEach(a=>{
+        if(a.dataset.link === page) a.classList.add('active');
+      });
+    })();
+  </script>
 </body>
 </html>
