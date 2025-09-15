@@ -1,76 +1,24 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Education — Isabel Scobbie</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Education - Isabel Scobbie</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body data-page="education">
-
-  <a class="skip-link" href="#main">Skip to main content</a>
-
-  <header class="site-header" role="banner">
-    <div class="site-brand">
-      <div class="logo">IS</div>
-      <div>
-        <h1>Isabel Scobbie</h1>
-        <p>Education & Research</p>
-      </div>
-    </div>
-
-    <nav class="site-nav" role="navigation" aria-label="Main">
-      <a href="index.html" class="nav-link" data-link="home"><i class="fa-solid fa-house fa-fw"></i> Home</a>
-      <a href="education.html" class="nav-link" data-link="education"><i class="fa-solid fa-graduation-cap fa-fw"></i> Education</a>
-      <a href="experience.html" class="nav-link" data-link="experience"><i class="fa-solid fa-briefcase fa-fw"></i> Experience</a>
-      <a href="volunteering.html" class="nav-link" data-link="volunteering"><i class="fa-solid fa-hands-helping fa-fw"></i> Volunteering</a>
-      <a href="interests.html" class="nav-link" data-link="interests"><i class="fa-solid fa-star fa-fw"></i> Interests</a>
-    </nav>
+<body>
+  <header>
+    <h1>Education</h1>
   </header>
 
-  <main id="main" class="container" role="main" aria-labelledby="page-title">
-    <h2 id="page-title">Education</h2>
+  <main class="content">
+    <h2>Loughborough University (2020–Present)</h2>
+    <p>Masters of Engineering in Aeronautical Engineering. Awarded ISTAT Scholarship for academic excellence.</p>
 
-    <!-- quick tiles replicate icons for consistent UI -->
-    <div class="quick-tiles" aria-hidden="false">
-      <a href="education.html"><i class="fa-solid fa-graduation-cap fa-fw"></i> Education</a>
-      <a href="experience.html"><i class="fa-solid fa-briefcase fa-fw"></i> Experience</a>
-      <a href="volunteering.html"><i class="fa-solid fa-hands-helping fa-fw"></i> Volunteering</a>
-      <a href="interests.html"><i class="fa-solid fa-star fa-fw"></i> Interests</a>
-    </div>
+    <h2>Research</h2>
+    <p>Ongoing research collaboration on structural health monitoring, sensor calibration, and energy harvesting sensors with potential for publication.</p>
 
-    <article class="card" aria-labelledby="lboro-title">
-      <h3 id="lboro-title">Loughborough University — MEng Aeronautical Engineering</h3>
-      <p><strong>ISTAT Scholar</strong> — Final year MEng, modules in structural dynamics, testing, and risk analysis.</p>
-      <h4>Research</h4>
-      <p>I work on structural health monitoring (SHM) for aerospace applications — sensor calibration, experimental testing, data analysis and prototype verification. (Add publications, datasets, diagrams here.)</p>
-
-      <h4>Key modules & techniques</h4>
-      <ul>
-        <li>Vibration testing & modal analysis</li>
-        <li>Data analysis (MATLAB / Python)</li>
-        <li>FEA & CFD basics</li>
-      </ul>
-
-      <h4>Images / figures</h4>
-      <img src="images/research-photo.jpg" alt="Isabel calibrating a sensor for structural testing">
-    </article>
-
-    <!-- Add more education entries as needed -->
+    <a href="index.html" class="tile purple" style="max-width:200px; margin:2rem auto; display:block; text-align:center;">← Back</a>
   </main>
-
-  <footer class="site-footer" role="contentinfo">
-    <div>© 2025 Isabel Scobbie</div>
-  </footer>
-
-  <script>
-    (function(){
-      const page = document.body.getAttribute('data-page') || 'education';
-      document.querySelectorAll('.site-nav .nav-link').forEach(a=>{
-        if(a.dataset.link === page) a.classList.add('active');
-      });
-    })();
-  </script>
 </body>
 </html>
