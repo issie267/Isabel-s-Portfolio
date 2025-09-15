@@ -5,14 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Isabel Scobbie – Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-<header>
-  <h1>Isabel Scobbie</h1>
-  <p>Aeronautical Engineering MEng | Risk Analysis | Coding | Testing</p>
+<!-- Hero Section -->
+<header class="hero">
+  <div class="hero-content">
+    <h1>Isabel Scobbie</h1>
+    <p>Aeronautical Engineering MEng | Risk Analysis | Coding | Testing</p>
+    <a href="education.html" class="btn">Explore My Work</a>
+  </div>
 </header>
 
+<!-- Navigation -->
 <nav>
   <a href="index.html">Home</a>
   <a href="education.html">Education</a>
@@ -21,18 +28,58 @@
   <a href="interests.html">Interests</a>
 </nav>
 
+<!-- Main Content -->
 <main>
   <section>
-    <h2>Welcome</h2>
-    <p>Hello! I’m Isabel, a final-year Aeronautical Engineering student at Loughborough University. This portfolio highlights my education, professional experience, volunteering work, and interests.</p>
+    <h2>About Me</h2>
+    <p>Hello! I’m Isabel, a final-year Aeronautical Engineering student at Loughborough University. 
+    This portfolio highlights my education, professional experience, volunteering work, and interests.</p>
+  </section>
+
+  <section class="card-grid">
+    <div class="card">
+      <i class="fa-solid fa-graduation-cap fa-2x"></i>
+      <h3>Education</h3>
+      <p>ISTAT Scholar & research in structural health monitoring.</p>
+      <a href="education.html">Learn more →</a>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-briefcase fa-2x"></i>
+      <h3>Experience</h3>
+      <p>Internships in EHS, IT consulting, and aerospace research.</p>
+      <a href="experience.html">Learn more →</a>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-handshake-angle fa-2x"></i>
+      <h3>Volunteering</h3>
+      <p>Peer mentoring and professional committee involvement.</p>
+      <a href="volunteering.html">Learn more →</a>
+    </div>
+
+    <div class="card">
+      <i class="fa-solid fa-star fa-2x"></i>
+      <h3>Interests</h3>
+      <p>Maths problem-solving, coding, and community activities.</p>
+      <a href="interests.html">Learn more →</a>
+    </div>
+  </section>
+
+  <section class="links">
+    <h2>Find Me Online</h2>
     <p>
-      <a href="https://linkedin.com/in/your-profile" target="_blank">Visit my LinkedIn</a> |
-      <a href="https://www.lboro.ac.uk/some-article-url" target="_blank">Read my Loughborough profile</a>
+      <a href="https://linkedin.com/in/your-profile" target="_blank">
+        <i class="fa-brands fa-linkedin"></i> LinkedIn
+      </a> |
+      <a href="https://www.lboro.ac.uk/some-article-url" target="_blank">
+        <i class="fa-solid fa-newspaper"></i> Loughborough Profile
+      </a>
     </p>
-    <img src="images/your-photo.jpg" alt="Professional photo of Isabel Scobbie">
   </section>
 </main>
 
+<!-- Footer -->
 <footer>
   <p>© 2025 Isabel Scobbie | Built with GitHub Pages</p>
 </footer>
