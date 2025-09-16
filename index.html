@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Isabel Scobbie - Portfolio & CV</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Isabel Scobbie - Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <header>
-    <h1>Isabel Scobbie</h1>
-    <p>Aeronautical Engineering MEng | Research | Sustainability | Leadership</p>
-    <div class="socials">
-      <a href="mailto:iscobbie52@outlook.com"><i class="fa-solid fa-envelope"></i></a>
-      <a href="tel:+447561270038"><i class="fa-solid fa-phone"></i></a>
-      <a href="https://linkedin.com/in/yourlinkedin" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://github.com/yourgithub" target="_blank"><i class="fa-brands fa-github"></i></a>
+    <div class="header-content">
+      <h1>Isabel Scobbie</h1>
+      <p>Aeronautical Engineering MEng | Research | Sustainability | Leadership</p>
+      <div class="socials">
+        <a href="mailto:iscobbie52@outlook.com"><i class="fa-solid fa-envelope"></i></a>
+        <a href="tel:+447561270038"><i class="fa-solid fa-phone"></i></a>
+        <a href="https://linkedin.com/in/yourlinkedin" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/yourgithub" target="_blank"><i class="fa-brands fa-github"></i></a>
+      </div>
     </div>
   </header>
 
-  <div class="container">
+  <main class="container">
     <!-- Profile -->
-    <section id="profile">
+    <section class="card">
       <h2>Profile</h2>
       <p>
         I am a final year Aeronautical Engineering MEng student at Loughborough University with academic and industry experience across aerospace research, manufacturing, and environmental health and safety. I recently completed a research internship on structural health monitoring, where I developed skills in sensor calibration and verification for aircraft applications. This has led to an ongoing research collaboration on energy harvesting sensors, with the potential for publication. Alongside my studies, I have taken on leadership roles including Peer Mentor Leader and Sustainability and Community Lead at Caterpillar.
@@ -30,33 +32,31 @@
     </section>
 
     <!-- Education -->
-    <section id="education">
+    <section class="card">
       <h2>Education</h2>
       <div class="entry">
         <h3>Loughborough University</h3>
-        <div class="meta">MEng Aeronautical Engineering | Sept 2020 – Present</div>
-        <ul>
-          <li>Awarded ISTAT Scholarship for academic excellence.</li>
-        </ul>
+        <p class="meta">MEng Aeronautical Engineering | Sept 2020 – Present</p>
+        <p>Awarded ISTAT Scholarship for academic excellence.</p>
       </div>
       <div class="entry">
         <h3>Cranbrook School</h3>
-        <div class="meta">A Levels | Sept 2017 – July 2019</div>
-        <p>Mathematics, Physics, Further Mathematics</p>
+        <p class="meta">A Levels | Sept 2017 – July 2019</p>
+        <p>Mathematics, Physics, Further Mathematics.</p>
       </div>
       <div class="entry">
         <h3>Highworth Grammar School</h3>
-        <div class="meta">GCSEs | Sept 2012 – July 2017</div>
-        <p>13 GCSEs</p>
+        <p class="meta">GCSEs | Sept 2012 – July 2017</p>
+        <p>13 GCSEs.</p>
       </div>
     </section>
 
     <!-- Experience -->
-    <section id="experience">
+    <section class="card">
       <h2>Experience</h2>
       <div class="entry">
         <h3>Research Intern</h3>
-        <div class="meta">Loughborough University | June – Sept 2025</div>
+        <p class="meta">Loughborough University | June – Sept 2025</p>
         <ul>
           <li>Calibration and verification of sensing nodes for aircraft structural health monitoring.</li>
           <li>Prototyped systems for international research teams.</li>
@@ -65,87 +65,44 @@
       </div>
       <div class="entry">
         <h3>EHS Placement</h3>
-        <div class="meta">Caterpillar, County Durham | June 2023 – Sept 2024</div>
+        <p class="meta">Caterpillar | June 2023 – Sept 2024</p>
         <ul>
           <li>Introduced Power BI and Power Apps to streamline incident reporting and management.</li>
-          <li>Presented projects to the MD and senior management, replicated globally.</li>
-          <li>Extended placement; received employee recognition.</li>
-        </ul>
-      </div>
-      <div class="entry">
-        <h3>IT Consultant (Intern)</h3>
-        <div class="meta">I-Access Solutions, Singapore | Nov 2019 – Feb 2020</div>
-        <ul>
-          <li>Updated training manuals, developed staff training materials, and supported IT administration.</li>
+          <li>Presented projects to senior management, replicated globally.</li>
         </ul>
       </div>
     </section>
 
-    <!-- Volunteering -->
-    <section id="volunteering">
-      <h2>Voluntary Employment</h2>
-      <div class="entry">
-        <h3>Research Collaboration</h3>
-        <div class="meta">Loughborough University | Aug 2025 – Present</div>
-        <ul>
-          <li>Preparing a paper on energy harvesting sensors for structural health monitoring.</li>
-        </ul>
+    <!-- Projects -->
+    <section class="card">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="project">
+          <img src="images/project1.jpg" alt="Project Screenshot">
+          <div class="project-content">
+            <h3>Multi-User Drawing Tool</h3>
+            <p>Collaborative drawing tool in C++ with MFC.</p>
+          </div>
+        </div>
+        <div class="project">
+          <img src="images/project2.jpg" alt="Project Screenshot">
+          <div class="project-content">
+            <h3>Synchronized Desktop Calendar</h3>
+            <p>Global scheduling system with SQL backend.</p>
+          </div>
+        </div>
+        <div class="project">
+          <img src="images/project3.jpg" alt="Project Screenshot">
+          <div class="project-content">
+            <h3>Custom Operating System</h3>
+            <p>UNIX-style OS built in C.</p>
+          </div>
+        </div>
       </div>
-      <div class="entry">
-        <h3>Peer Mentor Leader</h3>
-        <div class="meta">Loughborough Students Union | Apr 2025 – Present</div>
-        <ul>
-          <li>Supported and trained mentors, guided student welfare initiatives.</li>
-        </ul>
-      </div>
-      <div class="entry">
-        <h3>Peer Mentor</h3>
-        <div class="meta">Loughborough Students Union | June 2024 – Present</div>
-        <ul>
-          <li>Mentored students on time management, group work, and wellbeing.</li>
-        </ul>
-      </div>
-      <div class="entry">
-        <h3>Ask a Student Volunteer</h3>
-        <div class="meta">Loughborough University | July 2024 – Present</div>
-        <ul>
-          <li>Responded to student queries; certified Mental Health First Aider.</li>
-        </ul>
-      </div>
-      <div class="entry">
-        <h3>Sustainability & Community Lead</h3>
-        <div class="meta">Caterpillar Young Professionals | Aug 2023 – Sept 2024</div>
-        <ul>
-          <li>Hosted sustainability events, created partnerships with local charities.</li>
-          <li>Organised STEM outreach events for young people.</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Other -->
-    <section id="other">
-      <h2>Other Experience</h2>
-      <ul>
-        <li>Chair of the Yoga Society, Loughborough Students Union.</li>
-        <li>Private GCSE Tutor in Mathematics & Sciences.</li>
-        <li>Customer service roles at Waitrose, The National Trust, and The Cloudberry.</li>
-        <li>Chair of Cranbrook School Engineering Society, Senior Section Guide, and Hospice volunteer.</li>
-      </ul>
-    </section>
-
-    <!-- Achievements -->
-    <section id="achievements">
-      <h2>Interests & Achievements</h2>
-      <ul>
-        <li>1st prize at UCL Chemical Engineering Course for project delivery and presentation.</li>
-        <li>Member of Women’s Initiative Network (WIN) at Loughborough and Caterpillar.</li>
-        <li>Active in cycling, running, yoga, and charity events.</li>
-        <li>Completed UK Mental Health First Aid certification.</li>
-      </ul>
     </section>
 
     <!-- Skills -->
-    <section id="skills">
+    <section class="card">
       <h2>Skills</h2>
       <div class="skills">
         <span class="skill">MATLAB</span>
@@ -154,49 +111,16 @@
         <span class="skill">CAD</span>
         <span class="skill">CFD</span>
         <span class="skill">FEA</span>
-        <span class="skill">Experimental Testing</span>
-        <span class="skill">Sensor Calibration</span>
-        <span class="skill">Technical Reporting</span>
         <span class="skill">Leadership</span>
         <span class="skill">Mentoring</span>
         <span class="skill">Spanish (B1)</span>
-        <span class="skill">NEBOSH (in progress)</span>
-        <span class="skill">IOSH Managing Safely</span>
-        <span class="skill">Mental Health First Aid</span>
       </div>
     </section>
-
-    <!-- Projects -->
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="projects">
-        <div class="project">
-          <img src="images/project1.jpg" alt="Project 1 Screenshot" />
-          <div class="project-content">
-            <h3>Multi-User Drawing Tool</h3>
-            <p>Electronic classroom for collaborative drawing, built in C++ with MFC.</p>
-          </div>
-        </div>
-        <div class="project">
-          <img src="images/project2.jpg" alt="Project 2 Screenshot" />
-          <div class="project-content">
-            <h3>Synchronized Desktop Calendar</h3>
-            <p>Global scheduling tool with SQL and .NET backend.</p>
-          </div>
-        </div>
-        <div class="project">
-          <img src="images/project3.jpg" alt="Project 3 Screenshot" />
-          <div class="project-content">
-            <h3>Custom Operating System</h3>
-            <p>UNIX-style OS with scheduler, file system, and text editor built in C.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
+  </main>
 
   <footer>
     © 2025 Isabel Scobbie
   </footer>
 </body>
 </html>
+
